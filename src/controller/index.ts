@@ -5,5 +5,5 @@ export let authController: AuthController;
 
 export const createController = async () => {
     authController = createAuthController();
-    log.debug('Controller Created');
+    log.debug('All controller Created');
 };

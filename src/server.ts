@@ -1,4 +1,4 @@
-import { createController } from './controller/controller';
+import { createController } from './controller';
 (async () => {
     await createController();
 })();
