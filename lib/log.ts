@@ -1,4 +1,4 @@
-import _debug from 'debug';
+import _debug = require('debug');
 const namespaces = {
     INFO: 'app:info',
     DEBUG: 'app:debug',
@@ -11,7 +11,7 @@ info.log = console.log.bind(console);
 const debug = _debug(namespaces.DEBUG);
 debug.log = console.info.bind(console);
 
-const enable = (key: String) =>
+const enable = (key: string) =>
     ({
         [namespaces.DEBUG]: () =>
             _debug.enable([
