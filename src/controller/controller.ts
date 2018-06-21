@@ -1,15 +1,10 @@
 import log from '../../lib/log'
+import { createAuthController, AuthController } from './AuthController'
 
-export default class Controller {
-  static async create() {
-    return new Controller()
-  }
-}
-
-export let controller: Controller
+export let authController: AuthController
 
 export const createController = async() => {
-  log.debug('Controller Create');
-  controller = await Controller.create();
+  authController = createAuthController()
+  log.debug('Controller Created');
 }
 
