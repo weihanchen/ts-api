@@ -1,9 +1,9 @@
-import log from '../../lib/log';
-import { createAuthController, AuthController } from './AuthController';
-
-export let authController: AuthController;
+import log from '../lib/log';
+import { createAuthController } from './auth.controller';
+import { createBaseController } from './base.controller';
 
 export const createController = async () => {
-    authController = createAuthController();
+    await createAuthController();
+    await createBaseController();
     log.debug('All controller Created');
 };
